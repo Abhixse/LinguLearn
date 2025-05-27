@@ -6,7 +6,7 @@ const Home = () => {
             <div className="w-full h-2/3 flex bg-blue-100 border">
                 <div className='w-2/4 px-4  py-4'>
                     <div className='mx-5 my-20 cursor-default'>
-                        <span className='text-gray-800 font-[Roboto] font-bold text-3xl'>
+                        <span className='text-gray-800 font-[Roboto] font-bold text-5xl'>
                             <b>
                                 Learn a New Language, Fast and Fun!
                             </b>
