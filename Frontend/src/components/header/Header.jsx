@@ -8,7 +8,7 @@ const Header = () => {
       </div>
 
       {/* Center: Navigation Links */}
-      <nav className="hidden md:flex gap-8">
+      <nav className="hidden md:flex gap-8 font-[Poppins] font-semibold">
         <a href="/home" className="text-gray-700 hover:text-blue-600 transition">Home</a>
         <a href="/about" className="text-gray-700 hover:text-blue-600 transition">About</a>
         <a href="/services" className="text-gray-700 hover:text-blue-600 transition">Services</a>
@@ -16,9 +16,9 @@ const Header = () => {
       </nav>
 
       {/* Right: Login/Signup */}
-      <div className="flex gap-4">
+      <div className="flex gap-4 justify-center items-center">
         <a href="/login" className="text-gray-700 hover:text-blue-600 transition">Login</a>
-        <a href="/signup" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+        <a href="/signup" className="font-semibold  bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
           Signup
         </a>
       </div>
