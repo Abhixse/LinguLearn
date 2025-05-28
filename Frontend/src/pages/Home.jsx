@@ -5,7 +5,7 @@ const Home = () => {
     const [selectedLang, setSelectedLang] = useState(null);
 
     return (
-        <div className="w-full min-h-screen overflow-auto flex items-center justify-center">
+        <div className="w-full  overflow-auto flex items-center justify-center">
             <div className="w-full h-auto md:h-2/3 flex flex-col md:flex-row bg-blue-100 border">
                 {/* Left side */}
                 <div className='w-full md:w-2/4 px-4 py-4'>
