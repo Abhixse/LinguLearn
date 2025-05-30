@@ -5,16 +5,14 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Footer from './components/footer/Footer'
+import LanguageChosen from './pages/LanguageChosen'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-        <Header />
-          <Signup />
-          {/* <Login/> */}
-          <Footer />
+     
     </>
   )
 }
