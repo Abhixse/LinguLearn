@@ -2,16 +2,17 @@ import { useState } from 'react'
 import './App.css'
 import Header from './components/header/Header'
 import Home from './pages/Home'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-        <div className='w-full h-full m-0 p-0'> 
-          <Header />
-          <Home />
-        </div>
+ 
+          <Signup />
+          {/* <Login/> */}
     </>
   )
 }
