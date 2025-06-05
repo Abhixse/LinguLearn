@@ -15,7 +15,7 @@ import GoalsSet from './pages/GoalsSet'
 import ProficiencyLevel from './pages/ProficiencyLevel'
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(true); 
+  const [isLoggedIn, setIsLoggedIn] = useState(false); 
 
   return (
     <Router>
