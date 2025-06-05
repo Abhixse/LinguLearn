@@ -11,6 +11,8 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import NotFound from "./pages/NotFound";
 import PracticeScreen from './pages/PracticeScreen'
+import GoalsSet from './pages/GoalsSet'
+import ProficiencyLevel from './pages/ProficiencyLevel'
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true); 
@@ -25,7 +27,10 @@ const App = () => {
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login onLogin={() => setIsLoggedIn(true)} />} />
           <Route path="/signup" element={<Signup />} />
-
+          <Route path="/language-chosen" element={<LanguageChosen />} />
+          <Route path="/goal" element={<GoalsSet />} />
+          <Route path="/proficiency" element={<ProficiencyLevel />} />
+          
           {/* Protected Routes */}
           {isLoggedIn ? (
             <>
@@ -44,6 +49,7 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
+      <Footer />
     </Router>
   );
 };

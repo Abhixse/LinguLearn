@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Home = () => {
     const languages = ['Spanish', 'French', 'German', 'Japanese'];
@@ -19,12 +21,12 @@ const Home = () => {
                             </p>
                         </div>
                         <div className='flex flex-col sm:flex-row mt-5 gap-2'>
-                            <button className='bg-blue-700 border-none rounded-md text-white px-4 py-4 text-lg'>
+                            <Link to='/login' className='bg-blue-700 border-none rounded-md text-white px-4 py-4 text-lg'>
                                 Start Learning
-                            </button>
-                            <button className='bg-white border border-blue-700 rounded-md text-blue-700 px-4 py-4 text-lg font-semibold'>
+                            </Link>
+                            <Link to='/language-chosen' className='bg-white border border-blue-700 rounded-md text-blue-700 px-4 py-4 text-lg font-semibold'>
                                 Explore Course
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

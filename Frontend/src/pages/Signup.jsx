@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaGoogle, FaFacebookF } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
     return (
@@ -29,6 +30,7 @@ const Signup = () => {
                                     type="text"
                                     id="firstname"
                                     name="firstname"
+                                    placeholder='First Name'
                                     required
                                     className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                 />
@@ -38,6 +40,7 @@ const Signup = () => {
                                 <input
                                     type="text"
                                     id="lastname"
+                                    placeholder='Last Name'
                                     name="lastname"
                                     required
                                     className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -125,9 +128,9 @@ const Signup = () => {
                             {/* Sign Up Link */}
                             <p className="text-sm text-gray-600">
                                 Don’t have an account?{' '}
-                                <a href="#" className="text-blue-600 hover:underline">
+                                <Link to='/login' className="text-blue-600 hover:underline">
                                     Sign up for free
-                                </a>
+                                </Link>
                             </p>
                         </div>
                     </form>

@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaGoogle, FaFacebookF } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+
 
 const Login = () => {
     return (
@@ -96,9 +98,9 @@ const Login = () => {
                             {/* Sign Up Link */}
                             <p className="text-sm text-gray-600">
                                 Don’t have an account?{' '}
-                                <a href="#" className="text-blue-600 hover:underline">
+                                <Link to='/signup' className="text-blue-600 hover:underline">
                                     Sign up for free
-                                </a>
+                                </Link>
                             </p>
                         </div>
                     </form>

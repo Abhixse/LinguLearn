@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
 const languages = [
   { name: "Spanish", flag: "https://flagcdn.com/es.svg", popular: true },
@@ -18,15 +19,12 @@ const LanguageSelectionUI = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-50 px-4">
       <div className="bg-white rounded-xl shadow-md w-full max-w-4xl p-8">
-
-        {/* Progress Bar */}
         <div className="relative mb-6">
           <div className="w-full h-2 bg-gray-200 rounded-full">
-            <div className="h-2 bg-blue-600 rounded-full w-1/4"></div> {/* 25% */}
+            <div className="h-2 bg-blue-600 rounded-full w-1/3"></div>
           </div>
         </div>
 
-        {/* Step and Title */}
         <div className="mb-6">
           <div className="flex items-center space-x-2 mb-1">
             <div className="w-6 h-6 flex items-center justify-center text-white text-lg bg-blue-600 rounded-full">1</div>
@@ -35,17 +33,15 @@ const LanguageSelectionUI = () => {
           <p className="text-sm text-gray-500">Select the language you want to learn</p>
         </div>
 
-        {/* Language Grid */}
         <div className="grid grid-cols-3 gap-4 mb-8">
           {languages.map((lang) => (
             <div
               key={lang.name}
               onClick={() => setSelected(lang.name)}
-              className={`relative border rounded-md py-4 px-2 flex flex-col items-center justify-center transition cursor-pointer ${
-                selected === lang.name
+              className={`relative border rounded-md py-4 px-2 flex flex-col items-center justify-center transition cursor-pointer ${selected === lang.name
                   ? "border-green-500 shadow-md"
                   : "hover:shadow"
-              }`}
+                }`}
             >
               <img
                 src={lang.flag}
@@ -54,7 +50,6 @@ const LanguageSelectionUI = () => {
               />
               <span className="font-medium text-sm">{lang.name}</span>
 
-              {/* Top Right Badge */}
               {selected === lang.name ? (
                 <span className="absolute top-1 right-1 text-green-500 text-xs">✅</span>
               ) : (
@@ -65,7 +60,6 @@ const LanguageSelectionUI = () => {
                 )
               )}
 
-              {/* Bottom Right Green Arrow on Select */}
               {selected === lang.name && (
                 <span className="absolute bottom-1 right-1 text-green-500 text-lg font-bold">
                   →
@@ -75,21 +69,22 @@ const LanguageSelectionUI = () => {
           ))}
         </div>
 
-        {/* Navigation Buttons */}
         <div className="flex justify-between items-center">
-          <button className="text-sm text-gray-600 hover:text-black flex items-center gap-1">
+          <Link to='/home' className="text-sm text-gray-600 hover:text-black flex items-center gap-1">
             ← Back
-          </button>
-          <button
-            className={`px-5 py-2 rounded-md text-sm flex items-center gap-1 ${
-              selected
-                ? "bg-green-600 hover:bg-green-700 text-white"
-                : "bg-gray-300 text-gray-600 cursor-not-allowed"
-            }`}
-            disabled={!selected}
-          >
+          </Link>
+
+          {/* Pass selected language using `state` */}
+          <Link
+            to="/goal"
+            state={{ language: selected }}
+            className={`px-5 py-2 rounded-md text-sm flex items-center gap-1 ${selected
+              ? "bg-green-600 hover:bg-green-700 text-white"
+              : "bg-gray-300 text-gray-600 cursor-not-allowed"
+              }`}
+            >
             Continue →
-          </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -21,7 +21,7 @@ const Dashboard = () => {
   const listeningProgress = 60;
   const dailyGoalProgress = 80;
   const minutesCompleted = 12;
-
+  
   return (
     <div className='w-screen min-h-screen gap-10 flex flex-col justify-center items-center bg-blue-50 p-4 md:p-6'>
 
